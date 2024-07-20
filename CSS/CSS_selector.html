@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector</title>
+    <style>
+        /*universal selector*/
+        *
+        {
+            color: green;
+        }
+        /*tag selector*/
+        table
+        {
+            border: 2px solid green;
+            width: 50%;
+        }
+        /*ID selector*/
+        #MyHeading
+        {
+            background-color: yellow;
+            border: 2px solid green;
+            text-align: center;
+            width: 50%;
+        }
+        /*Class selector*/
+        .MySecondHeading
+        {
+            background-color: orange;
+            border: 2px solid red;
+            text-align: center;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="MyHeading">My Heading.</h1><br>
+    <h1 class="MySecondHeading">Employee Details.</h1><br>
+    <table>
+        <tr><th>Eid</th><th>Ename</th><th>Salary</th></tr>
+        <tr><td>101</td><td>Kabi</td><td>1000</td></tr>
+        <tr>
+            <td>102</td>
+            <td>Dharun</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Karthi</td>
+            <td>3000</td>
+        </tr>
+    </table>
+</body>
+</html>
