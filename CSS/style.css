@@ -1,0 +1,11 @@
+h3
+{
+    color:rgb(0, 0, 0);
+    background-color: rgba(255, 115, 115, 0.911);
+    width:100px;
+    padding:20px;
+    border:2px solid rgb(27, 27, 27);
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+}
