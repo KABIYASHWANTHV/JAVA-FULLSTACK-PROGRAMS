@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <script>
+        function Pattern()
+        {
+            var a=document.getElementById("n1").value;
+            var b=""; 
+            for(var i=0;i<a;i++)
+            {
+                for(var j=0;j<=i;j++)
+                {
+                    b=b.concat("* ");
+                }
+                b=b.concat("<br>");
+            }
+            document.getElementById("ResultDiv").innerHTML="<font color='green'><b>" +b+ "</b></font>";
+        }
+    </script>
+</head>
+<body>
+    Enter number of rows<input type="text" id="n1" value="rows" onfocus="this.value=' '"><br><br>
+    <button onclick="Pattern()">Calculate</button>
+    <div id="ResultDiv">
+
+    </div>
+</body>
+</html>

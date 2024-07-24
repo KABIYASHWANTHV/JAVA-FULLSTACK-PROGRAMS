@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime number</title>
+    <script>
+        function Prime()
+        {
+            var num = document.getElementById("n1").value;
+            var flag = 0;
+            for(var i = 2; i < num; i++)
+            {
+                if(num % i == 0)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag == 0)
+            {
+                document.getElementById("ResultDiv").innerHTML = "Prime number";
+            }
+            else
+            {
+                document.getElementById("ResultDiv").innerHTML = "Not a prime number";
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter a Number <input type="text" id="n1" value="Enter a positive value" onfocus="this.value=' '"><br><br>
+    <button onclick="Prime()">Calculate</button>
+    <div id="ResultDiv">
+
+    </div>
+</body>
+</html>
