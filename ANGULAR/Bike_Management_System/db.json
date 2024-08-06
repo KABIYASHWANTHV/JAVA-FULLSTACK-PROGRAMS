@@ -1,0 +1,16 @@
+{
+  "bikes": [
+    {
+      "id": "101",
+      "bikeName": "pulsar",
+      "bikePrice": "350000",
+      "bikeColor": "white"
+    },
+    {
+      "id": "102",
+      "bikeName": "pulsar",
+      "bikePrice": "300000",
+      "bikeColor": "red"
+    }
+  ]
+}
