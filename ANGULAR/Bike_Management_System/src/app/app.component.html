@@ -36,11 +36,11 @@
             <div *ngIf="bikeColor.errors?.['required']">
                 <b style="color: red;">Bike Color Required.</b>
             </div>
-        </div>
+        </div><br>
         <button class="btn btn-success" (click)="insertBike(myForm.value)">Save</button>&nbsp;&nbsp;
         <button class="btn btn-primary" (click)="updateBike(myForm.value)">Update</button>&nbsp;&nbsp;
         <button class="btn btn-info" (click)="deleteBike(myForm.value)">Delete</button>&nbsp;&nbsp;
-        <button class="btn btn-warning" (click)="findBike(myForm.value)">Find</button>&nbsp;&nbsp;
+        <button class="btn btn-warning" (click)="findBike(myForm.value)">Find</button>&nbsp;
         <button class="btn btn-danger" (click)="findAllBike()">Find All</button>
     </form>
     </div>

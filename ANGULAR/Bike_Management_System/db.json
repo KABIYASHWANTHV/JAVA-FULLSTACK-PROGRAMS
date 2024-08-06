@@ -7,10 +7,10 @@
       "bikeColor": "white"
     },
     {
-      "id": "102",
-      "bikeName": "pulsar",
+      "id": "103",
+      "bikeName": "bullet",
       "bikePrice": "300000",
-      "bikeColor": "red"
+      "bikeColor": "white"
     }
   ]
 }
