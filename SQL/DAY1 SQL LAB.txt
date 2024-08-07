@@ -1,0 +1,223 @@
+Statement 1
+
+create table tbl_employee (eid number(5), ename varchar(20), esalary number(5));
+
+Table created.
+
+Statement 2
+
+desc tbl_employee
+TABLE TBL_EMPLOYEE
+Column	Null?	Type
+EID	-	NUMBER(5,0)
+ENAME	-	VARCHAR2(20)
+ESALARY	-	NUMBER(5,0)
+
+3 rows selected.
+
+Statement 3
+
+insert into tbl_employee values(101,'kabi',2000);
+
+1 row(s) inserted.
+
+Statement 4
+
+insert into tbl_employee values(102,'Raj',3000);
+
+1 row(s) inserted.
+
+Statement 5
+
+insert into tbl_employee values(103,'Kumar',4000);
+
+1 row(s) inserted.
+
+Statement 6
+
+insert into tbl_employee values(104,'Vijay',5000);
+
+1 row(s) inserted.
+
+Statement 7
+
+select * from tbl_employee
+EID	ENAME	ESALARY
+102	Raj	3000
+104	Vijay	5000
+101	kabi	2000
+103	Kumar	4000
+
+4 rows selected.
+
+Statement 8
+commit;
+
+Statement processed.
+
+Statement 9
+
+select eid , esalary from tbl_employee;
+EID	ESALARY
+102	3000
+104	5000
+101	2000
+103	4000
+
+4 rows selected.
+
+Statement 10
+
+insert into tbl_employee values(101,'Vimal',6000);
+
+1 row(s) inserted.
+
+Statement 11
+
+select eid from tbl_employee;
+EID
+102
+104
+101
+101
+103
+
+5 rows selected.
+
+Statement 12
+
+select distinct eid from tbl_employee;
+EID
+104
+101
+103
+102
+
+4 rows selected.
+
+Statement 13
+
+select eid from tbl_employee where eid=101;
+EID
+101
+101
+
+2 rows selected.
+
+Statement 14
+
+select * from tbl_employee where eid=101;
+EID	ENAME	ESALARY
+101	Vimal	6000
+101	kabi	2000
+
+2 rows selected.
+
+Statement 15
+
+select * from tbl_employee where ename='Vijay';
+EID	ENAME	ESALARY
+104	Vijay	5000
+
+Statement 16
+
+select * from tbl_employee where esalary>4000;
+EID	ENAME	ESALARY
+104	Vijay	5000
+101	Vimal	6000
+
+2 rows selected.
+
+Statement 17
+
+select * from tbl_employee where ename!='Vijay';
+EID	ENAME	ESALARY
+102	Raj	3000
+101	Vimal	6000
+101	kabi	2000
+103	Kumar	4000
+
+4 rows selected.
+
+Statement 18
+
+select * from tbl_employee where ename<>'Vijay';
+EID	ENAME	ESALARY
+102	Raj	3000
+101	Vimal	6000
+101	kabi	2000
+103	Kumar	4000
+
+4 rows selected.
+
+Statement 19
+
+update tbl_employee set esalary=7000 where eid=102;
+
+1 row(s) updated.
+
+Statement 20
+
+select * from tbl_employee;
+EID	ENAME	ESALARY
+102	Raj	7000
+104	Vijay	5000
+101	Vimal	6000
+101	kabi	2000
+103	Kumar	4000
+
+5 rows selected.
+
+Statement 21
+
+commit;
+
+Statement processed.
+
+Statement 22
+
+update tbl_employee set esalary=7000 , ename='Ajay' where eid=104;
+
+1 row(s) updated.
+
+Statement 23
+
+commit
+Statement processed.
+
+Statement 24
+
+select * from tbl_employee;
+EID	ENAME	ESALARY
+102	Raj	7000
+104	Ajay	7000
+101	Vimal	6000
+101	kabi	2000
+103	Kumar	4000
+
+5 rows selected.
+
+Statement 25
+
+delete from tbl_employee where eid=101;
+2 row(s) deleted.
+
+Statement 26
+
+commit
+Statement processed.
+
+Statement 27
+
+select * from tbl_employee where eid in (101,103,104);
+EID	ENAME	ESALARY
+104	Ajay	7000
+103	Kumar	4000
+
+2 rows selected.
+
+Statement 28
+
+select * from tbl_employee where eid not in (101,103,104);
+EID	ENAME	ESALARY
+102	Raj	7000
