@@ -1,0 +1,336 @@
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where esalary between 2000 and 6000;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       103 Kumar                      4000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where esalary not  between 2000 and 6000;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       102 Raj                        7000
+       104 Ajith                      7000
+
+SQL> select * from tbl_employee where esalary  between 2000 and 6000;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       103 Kumar                      4000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where esalary >=4000 and eid in(101,103);
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       103 Kumar                      4000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where esalary >=4000 or eid in(101,103);
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where ename like 'K%';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       103 Kumar                      4000
+
+SQL> select * from tbl_employee where ename like '_a%';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+
+SQL> select * from tbl_employee where ename not  like '_a%';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where ename not  like '%K';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where ename not  like 'K%';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       102 Raj                        7000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where ename like '%a%';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee where ename like '%r';
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       103 Kumar                      4000
+
+1 row created.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> select * from tbl_employee where ename is null;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       501                            2000
+
+SQL> select * from tbl_employee where ename is not null;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> select * from tbl_employee order by eid;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       101 Ajay                       6000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       501                            2000
+
+6 rows selected.
+
+SQL> select * from tbl_employee order by eid desc;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       501                            2000
+       104 Ajith                      7000
+       103 Kumar                      4000
+       102 Raj                        7000
+       101 Kabi                       2000
+       101 Ajay                       6000
+
+6 rows selected.
+
+SQL> select * from tbl_employee order by ename;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Ajay                       6000
+       104 Ajith                      7000
+       101 Kabi                       2000
+       103 Kumar                      4000
+       102 Raj                        7000
+       501                            2000
+
+6 rows selected.
+
+SQL> select * from tbl_employee order by eid ,  ename;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Ajay                       6000
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       501                            2000
+
+6 rows selected.
+
+SQL> select * from tbl_employee order by eid ,  ename desc;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       101 Ajay                       6000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       501                            2000
+
+6 rows selected.
+
+SQL> alter table tbl_employee add doj date;
+
+Table altered.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY DOJ
+---------- -------------------- ---------- ---------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> update tbl_employee set doj=sysdate where eid=103;
+
+1 row updated.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY DOJ
+---------- -------------------- ---------- ---------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000 07-AUG-24
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> update tbl_employee set doj='05-AUG-24' where eid=101;
+
+2 rows updated.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY DOJ
+---------- -------------------- ---------- ---------
+       101 Kabi                       2000 05-AUG-24
+       102 Raj                        7000
+       103 Kumar                      4000 07-AUG-24
+       104 Ajith                      7000
+       101 Ajay                       6000 05-AUG-24
+       501                            2000
+
+6 rows selected.
+
+SQL> alter table tbl_employee drop column doj;
+
+Table altered.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                   ESALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> desc tbl_employee;
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                                NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ ESALARY                                            NUMBER(10)
+
+SQL> alter table tbl_employee modify esalary number(12);
+
+Table altered.
+
+SQL> desc tbl_employee;
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EID                                                NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ ESALARY                                            NUMBER(12)
+
+SQL> alter table tbl_employee rename column esalary to emp_salary;
+
+Table altered.
+
+SQL> select * from tbl_employee;
+
+       EID ENAME                EMP_SALARY
+---------- -------------------- ----------
+       101 Kabi                       2000
+       102 Raj                        7000
+       103 Kumar                      4000
+       104 Ajith                      7000
+       101 Ajay                       6000
+       501                            2000
+
+6 rows selected.
+
+SQL> rename tbl_employee to tbl_emp;
+
+Table renamed.
+
+SQL> drop table tbl_emp;
+
+Table dropped.
