@@ -1,0 +1,27 @@
+package com.kabi;
+class Person
+{
+	String personName;
+	int personAge;
+	Person(String personName,int personAge)
+	{
+		this.personName = personName;
+		this.personAge = personAge;
+	}
+	void display()
+	{
+		System.out.println("Person Name : "+personName);
+		System.out.println("Person Age : "+personAge);
+	}
+}
+public class Assignment2Q1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person obj = new Person("Kabi",21);
+		obj.display();
+		Person obj1 = new Person("Abdul",22);
+		obj1.display();
+	}
+
+}
