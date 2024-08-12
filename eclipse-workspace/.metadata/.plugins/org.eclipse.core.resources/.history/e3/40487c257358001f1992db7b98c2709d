@@ -1,0 +1,19 @@
+package com.kabi;
+class student
+{
+	int registrationNo;
+	String studentName;
+	int arr[]=new int[5];
+	student(int registrationNo,String studentName)
+	{
+		this.registrationNo=registrationNo;
+		this.studentName=studentName;
+	}
+}
+public class Assignment 
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}

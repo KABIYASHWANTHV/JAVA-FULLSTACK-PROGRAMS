@@ -1,0 +1,25 @@
+package com.kabi;
+class Book
+{
+	String bookTitle;
+	String bookAuthor;
+	int ISBN;
+	Book(String bookTitle,String bookAuthor,int ISBN)
+	{
+		this.bookTitle = booktitle;
+		this.bookAuthor = bookAuthor;
+		this.ISBN = ISBN;
+	}
+	void addBook()
+	{
+		
+	}
+}
+public class AssignmentQ5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

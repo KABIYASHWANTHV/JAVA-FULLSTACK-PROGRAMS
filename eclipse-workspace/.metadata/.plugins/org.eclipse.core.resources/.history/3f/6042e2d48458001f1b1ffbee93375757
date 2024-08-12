@@ -1,0 +1,23 @@
+package com.kabi;
+class Person
+{
+	String personName;
+	int personAge;
+	Person(String personName,int personAge)
+	{
+		this.personName = personName;
+		this.personAge = personAge;
+	}
+	void display()
+	{
+		
+	}
+}
+public class Assignment2Q1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

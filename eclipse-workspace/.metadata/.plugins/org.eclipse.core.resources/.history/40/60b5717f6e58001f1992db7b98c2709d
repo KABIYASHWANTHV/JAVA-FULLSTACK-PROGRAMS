@@ -1,0 +1,18 @@
+package com.kabi;
+//method overloading
+public class MethodOverloading {
+	void myMethod(String name)
+	{
+		
+	}
+	void myMethod(int a, int b)
+	{
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

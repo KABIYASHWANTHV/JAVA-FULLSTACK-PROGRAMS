@@ -1,0 +1,14 @@
+package com.kabi;
+
+//types of variable in java
+public class MyClass1{
+	int b=20; //Instance or Object Variable
+	static int c=30; //static or class variable
+	public static void main(String[] args) {
+		int a=10; //Local Variable
+		System.out.println("Local Variable : " + a);
+		Variables obj = new Variables();
+		System.out.println("Instance Variable : " +obj.b);
+		System.out.println("Static Variable : " +Variables.c);
+	}
+}
