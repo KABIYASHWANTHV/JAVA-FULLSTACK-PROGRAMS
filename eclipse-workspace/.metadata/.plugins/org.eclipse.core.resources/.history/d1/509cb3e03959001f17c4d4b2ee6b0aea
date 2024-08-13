@@ -1,0 +1,17 @@
+package com.kabi;
+//single inheritance
+class TwoWheeler
+{
+	void noOfWheel()
+	{
+		System.out.println("I have two wheels");
+	}
+}
+public class singleInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

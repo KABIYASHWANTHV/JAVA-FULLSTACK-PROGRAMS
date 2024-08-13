@@ -1,0 +1,35 @@
+package com.kabi;
+//hybrid inheritance
+class Vehicle1
+{
+	void noOfEngine()
+	{
+		System.out.println("I have one engine");
+	}
+}
+class TwoWheeler2 extends Vehicle1
+{
+	void noOfWheel()
+	{
+		System.out.println("I have two wheels");
+	}
+}
+class Bike2 extends TwoWheeler2
+{
+	void brandName()
+	{
+		System.out.println("Brand name is Honda");
+	}
+}
+
+public class HybridInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bike2 bike = new Bike();
+		bike.noOfWheel();
+		bike.brandName();
+	}
+
+}
+

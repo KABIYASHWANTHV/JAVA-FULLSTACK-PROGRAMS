@@ -1,0 +1,37 @@
+package com.kabi;
+
+public class MultilevelInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+package com.kabi;
+//single inheritance
+class TwoWheeler
+{
+	void noOfWheel()
+	{
+		System.out.println("I have two wheels");
+	}
+}
+class Bike extends TwoWheeler
+{
+	void brandName()
+	{
+		System.out.println("Brand name is Honda");
+	}
+}
+public class singleInheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bike bike = new Bike();
+		bike.noOfWheel();
+		bike.brandName();
+	}
+
+}
+
